@@ -1,0 +1,12 @@
+services:
+  hermes:
+    image: nousresearch/hermes-agent:latest
+    restart: unless-stopped
+    command: gateway run
+    environment:
+      HERMES_UID: ${HERMES_UID:?Set HERMES_UID with id -u}
+      HERMES_GID: ${HERMES_GID:?Set HERMES_GID with id -g}
+    volumes:
+      - ./hermes-config:/opt/data
+    ports:
+      - "127.0.0.1:8642:8642"
