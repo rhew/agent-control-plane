@@ -1,3 +1,13 @@
 hermes-config/*
 !hermes-config/
 !hermes-config/config.yaml
+!hermes-config/SOUL.md
+!hermes-config/memories/
+hermes-config/memories/*
+!hermes-config/memories/MEMORY.md
+!hermes-config/memories/USER.md
+hermes-config/memories/*.lock
+!hermes-config/skills/
+hermes-config/skills/*
+!hermes-config/skills/james/
+!hermes-config/skills/james/**

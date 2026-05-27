@@ -1,0 +1,3 @@
+James’s cross-context writing preferences: preserve his voice over generic polish, use concrete details, active voice, the Oxford comma, no em dashes, no corporate filler, no influencer voice, no inflated importance, no fake enthusiasm, and choose the voice mode by context, such as clear professional, family/personal, practical technical, plainspoken essay, playful persona, or sincere memorial.
+§
+User's name is James. Bucka is his Discord nickname.
