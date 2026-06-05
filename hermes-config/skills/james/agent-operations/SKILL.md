@@ -85,6 +85,16 @@ When James asks for GitHub, repository, or PR work:
 6. Run targeted checks or tests that fit the change.
 7. Summarize changed files, verification, and PR status in a concise format.
 
+### PRs via the rhew-agent Fork
+
+James may provide GitHub access through `GH_TOKEN` for the `rhew-agent` account. When that token is present:
+
+- Treat `rhew-agent` as the fork owner unless James says otherwise.
+- Configure commits as `rhew-agent <rhew-agent@users.noreply.github.com>` when local git identity is unset.
+- Push PR branches to the `rhew-agent` fork, not directly to James's personal account.
+- Create PRs with an explicit head such as `--head rhew-agent:<branch>` so GitHub opens the pull request from the PAT-accessible fork.
+- Keep `GH_TOKEN` and other GitHub credentials out of logs, chat, commits, and docs.
+
 ## Capability Summaries
 
 When James asks what you can do now:

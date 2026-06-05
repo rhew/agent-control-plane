@@ -157,6 +157,8 @@ General conventions:
 - Use short paragraphs.
 - Use bullets for reports, lists, and "small things that matter."
 - Recipes use structured headings, ingredient lists, and numbered steps.
+- For recipe substitutions, keep option wording parallel: base ingredient, `or` specific substitute, then the dietary reason when helpful, such as `for gluten-free` or `for dairy-free`.
+- When adding optional mix-ins, add both the ingredient line and the corresponding instruction step, such as folding it in before spreading the batter.
 
 Code block example:
 
@@ -349,6 +351,16 @@ When creating PRs against this repo:
 9. Preserve James's voice over polishing it into bland blog copy.
 10. Verify the Hugo build path does not write generated output into the tracked legacy `site/` tree.
 
+### Removing or retiring old functionality
+
+When James asks to remove unused site functionality, distinguish between runtime code and historical content:
+
+- Remove the services, config, secrets references, generated/sample assets, and README steps that keep the unused functionality alive.
+- Do **not** delete an existing article about the project unless James explicitly asks for content removal.
+- If the article would become misleading, update it instead: add `lastmod`, revise the summary, and make the body clear that the project or site integration is archived/no longer running.
+- Keep the archived article in the same voice as the original topic. For code or supervillainy posts, use first-person plainspoken explanation with light concrete humor, not a sterile deprecation notice.
+11. When removing site functionality, separate runtime/config removal from published article/content removal. Do not delete a post just because it describes the deprecated feature unless James explicitly asks to remove the published post too.
+
 ## Common Pitfalls
 
 1. **Using Conventional Commits.** This repo does not use them. Prefer `Fix links` over `fix: repair broken links`.
@@ -359,6 +371,7 @@ When creating PRs against this repo:
 6. **Duplicating titles as H1s by default.** Most posts rely on front matter title and begin with body copy or `##` sections.
 7. **Writing generic recipe prose.** Recipes need accurate quantities, timing, substitutions, and steps more than flourish.
 8. **Letting local Hugo output pollute tracked files.** Use `make hugo-local` for local static builds.
+9. **Rewriting historical project posts during cleanup.** When removing old site functionality, keep posts that record what was built. Add a short dated update only when it clearly matches the remaining article and does not distort the original record. Do not delete the article or rewrite it as if it were only current documentation.
 
 ## Verification Checklist
 
