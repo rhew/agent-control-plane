@@ -38,3 +38,9 @@ docker compose restart hermes
 ```sh
 docker compose run --rm -it hermes <command>
 ```
+
+## (Re)authenticate Hermes Codex
+
+```bash
+ssh -tt lenny 'docker exec -it -u hermes -e HOME=/opt/data agent-control-plane-hermes-1 /opt/hermes/bin/hermes auth add openai-codex'
+```
